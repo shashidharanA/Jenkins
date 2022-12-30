@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/net-vinothkumar/devops-cicd-demo.git'
+        git 'https://github.com/vseenivasan/DNC-Server-Test.git'
       }
     }
     stage('Building image') {
@@ -25,7 +25,7 @@ pipeline {
                    * First, the incremental build number from Jenkins
                    * Second, the 'latest' tag.
                    * Pushing multiple tags is cheap, as all the layers are reused. */
-          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+          docker.withRegistry('https://registry.hub.docker.com', 'cb0172e9-cc49-4aa2-a96a-bedb743ca9a8') {
               dockerImage.push("${env.BUILD_NUMBER}")
               dockerImage.push("latest")
           }
