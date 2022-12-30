@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "interviewdot/cicd-demo"
+    registry = "ashashi/cicd"
     registryCredential = 'docker-hub-credentials'
     dockerImage = ''
   }
