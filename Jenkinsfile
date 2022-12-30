@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "ashashi/cicd"
-    registryCredential = 'docker-hub-credentials'
+    registryCredential = 'cb0172e9-cc49-4aa2-a96a-bedb743ca9a8'
     dockerImage = ''
   }
   agent any
